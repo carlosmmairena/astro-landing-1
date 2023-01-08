@@ -1,7 +1,19 @@
 ---
-import Layout from "../layouts/layout.astro";
+import Layout from "../layouts/Layout.astro";
+
+//Components
+import Hero from "../components/landing/Hero.astro";
+import About from "../components/landing/About.astro";
+import More from "../components/landing/More.astro";
+import Features from "../components/landing/Features.astro";
+import Projects from "../components/landing/Projects.astro";
+
 ---
 
-<Layout>
-	<h1>Home Page</h1>
+<Layout title="Home">
+	<Hero/>
+	<More/>
+	<Features/>
+	<Projects/>
+	<About/>
 </Layout>

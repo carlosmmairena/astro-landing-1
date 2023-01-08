@@ -1,1 +1,25 @@
-<h1>Projects</h1>
+---
+import projects from "../../configs/projects.json";
+---
+
+<section>
+    <h1 class="text-center | font-bold | text-5xl | my-20">Projects</h1>
+    {
+        projects.map(project => (
+                <div class="flex | text-center | md:text-left">
+                    <div class="flex-1 | | gap-y-3">
+                        <h2 class="font-bold | text-2xl | my-4">{project.title}</h2>
+                        <p class="my-2">{project.description}</p>
+
+                        <button type="button" class="bg-indigo-500 | px-3 py-2 hover:bg-indigo-300">
+                            More info
+                        </button>
+                    </div>
+                    <div class="flex-1">
+                        <img src={project.image} alt="Project" class="w-72 | m-auto | md:p-5">
+                    </div>
+                </div>
+            )
+        )
+    }
+</section>
